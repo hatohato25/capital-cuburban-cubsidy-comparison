@@ -1,0 +1,255 @@
+{
+  "prefecture": "神奈川県",
+  "lastUpdated": "2025-12-06",
+  "officialUrl": "https://www.pref.kanagawa.jp/docs/sy8/kosodateshien.html",
+  "policies": [
+    {
+      "id": "kanagawa_jido_teate",
+      "name": "児童手当",
+      "type": "childcare_allowance",
+      "category": "現金給付",
+      "prefecture": "神奈川県",
+      "amount": "variable",
+      "frequency": "monthly",
+      "conditions": {
+        "incomeLimit": {
+          "type": "none"
+        },
+        "childCondition": {
+          "minAge": 0,
+          "maxAge": 18,
+          "birthOrder": "any"
+        }
+      },
+      "description": "国の制度。2024年12月から所得制限撤廃、全世帯が対象。2024年10月から高校生年代（18歳）まで対象拡大",
+      "calculationMethod": "年齢と子供の順序により金額が変動（0-2歳: 月15,000円、3-18歳: 月10,000円、第3子以降（3歳〜小学生）: 月30,000円※2025年4月から）",
+      "ageBasedAmounts": [
+        {
+          "minAge": 0,
+          "maxAge": 2,
+          "amount": 15000,
+          "frequency": "monthly",
+          "description": "0-2歳（第1・2子）"
+        },
+        {
+          "minAge": 3,
+          "maxAge": 18,
+          "amount": 10000,
+          "frequency": "monthly",
+          "description": "3-18歳（第1・2子）"
+        }
+      ],
+      "metadata": {
+        "sourceUrl": "https://www.cfa.go.jp/policies/kokoseido/jidouteate/annai",
+        "sourceName": "こども家庭庁",
+        "lastUpdated": "2025-12-06",
+        "notes": "2024年12月から所得制限撤廃。2025年4月から第3子以降（3歳〜小学生）は月30,000円に増額予定"
+      }
+    },
+    {
+      "id": "kanagawa_high_school_national",
+      "name": "高校授業料無償化（国制度）",
+      "type": "high_school_tuition",
+      "category": "教育費補助",
+      "prefecture": "神奈川県",
+      "amount": 118800,
+      "frequency": "yearly",
+      "conditions": {
+        "incomeLimit": {
+          "type": "none"
+        },
+        "childCondition": {
+          "minAge": 15,
+          "maxAge": 17,
+          "birthOrder": "any"
+        }
+      },
+      "description": "2025年度から所得制限撤廃、全生徒に年間11万8,800円を支給（国の制度）",
+      "calculationMethod": "年額11万8,800円 × 3年 = 356,400円",
+      "metadata": {
+        "sourceUrl": "https://www.pref.kanagawa.jp/docs/v3e/jyosei/gakuhisien/gakuhihojyo.html",
+        "sourceName": "神奈川県",
+        "lastUpdated": "2025-12-06",
+        "notes": "2025年度から所得制限撤廃"
+      }
+    },
+    {
+      "id": "kanagawa_high_school_private_2025",
+      "name": "私立高校授業料支援（神奈川県独自・2025年度）",
+      "type": "high_school_tuition",
+      "category": "教育費補助",
+      "prefecture": "神奈川県",
+      "amount": "variable",
+      "frequency": "yearly",
+      "conditions": {
+        "incomeLimit": {
+          "type": "tiered",
+          "tiers": [
+            {
+              "threshold": 7500000,
+              "amount": 468000,
+              "description": "年収約750万円未満：最大46万8,000円"
+            },
+            {
+              "threshold": 9100000,
+              "amount": 468000,
+              "description": "年収約910万円未満（多子世帯）：最大46万8,000円"
+            }
+          ]
+        },
+        "childCondition": {
+          "minAge": 15,
+          "maxAge": 17,
+          "birthOrder": "any"
+        }
+      },
+      "description": "2025年度: 年収約750万円未満の世帯（多子世帯は約910万円未満）に対して、最大46万8,000円まで支援",
+      "calculationMethod": "年収に応じて変動。国の上限39万6,000円を、神奈川県独自の補助金で46万8,000円まで引き上げ。2026年度以降は所得制限撤廃、全世帯が最大45万7,000円まで支給予定",
+      "ageBasedAmounts": [],
+      "metadata": {
+        "sourceUrl": "https://www.pref.kanagawa.jp/docs/v3e/jyosei/gakuhisien/gakuhihojyo.html",
+        "sourceName": "神奈川県",
+        "lastUpdated": "2025-12-06",
+        "notes": "県内私立高校のみ。生活保護世帯・住民税非課税世帯（年収約270万円未満）に対して、入学金支援最大21万1,000円"
+      }
+    },
+    {
+      "id": "kanagawa_medical_expense",
+      "name": "子ども医療費助成",
+      "type": "medical_expense",
+      "category": "医療費補助",
+      "prefecture": "神奈川県",
+      "amount": 0,
+      "frequency": "yearly",
+      "conditions": {
+        "incomeLimit": {
+          "type": "none"
+        },
+        "childCondition": {
+          "minAge": 0,
+          "maxAge": 18,
+          "birthOrder": "any"
+        }
+      },
+      "description": "市町村ごとに独自制度があり、対象年齢や所得制限が異なる。横浜市：18歳まで対象、令和5年8月から中学3年生までの所得制限撤廃、通院時の1回500円までの窓口負担を撤廃。川崎市・相模原市なども独自の助成制度あり",
+      "calculationMethod": "市町村により制度が大きく異なるため、本計算では保守的に0円としています。実際には多くの自治体で助成制度があります",
+      "metadata": {
+        "sourceUrl": "https://www.city.yokohama.lg.jp/kenko-iryo-fukushi/kenko-iryo/iryohijosei/shoni/child.html",
+        "sourceName": "神奈川県",
+        "lastUpdated": "2025-12-08",
+        "notes": "横浜市は令和5年8月から中学3年生までの所得制限撤廃。市町村により助成内容が大きく異なる",
+        "disclaimer": "神奈川県は市町村ごとに制度が異なり、統一的な算出が困難なため、本サイトでは保守的に0円としています。実際には多くの自治体で医療費助成制度があります。詳細は各市町村にお問い合わせください。"
+      }
+    },
+    {
+      "id": "kanagawa_hoikuryo_3_5",
+      "name": "保育料無償化（3-5歳）",
+      "type": "childcare_fee",
+      "category": "教育費補助",
+      "prefecture": "神奈川県",
+      "amount": 0,
+      "frequency": "yearly",
+      "conditions": {
+        "incomeLimit": {
+          "type": "none"
+        },
+        "childCondition": {
+          "minAge": 3,
+          "maxAge": 5,
+          "birthOrder": "any"
+        }
+      },
+      "description": "3歳児から5歳児までの全ての子どもの保育料が無償化（国の制度）",
+      "calculationMethod": "保育料は世帯の所得によって異なるため、金額は0円として計算",
+      "metadata": {
+        "sourceUrl": "https://www.pref.kanagawa.jp/docs/sy8/musyouka/2019musyouka.html",
+        "sourceName": "神奈川県",
+        "lastUpdated": "2025-12-06",
+        "disclaimer": "保育料は世帯の所得によって異なるため、本サイトでは金額を0円としています。"
+      }
+    },
+    {
+      "id": "kanagawa_hoikuryo_0_2_second",
+      "name": "保育料軽減（0-2歳・第2子）",
+      "type": "childcare_fee",
+      "category": "教育費補助",
+      "prefecture": "神奈川県",
+      "amount": 0,
+      "frequency": "yearly",
+      "conditions": {
+        "incomeLimit": {
+          "type": "none"
+        },
+        "childCondition": {
+          "minAge": 0,
+          "maxAge": 2,
+          "birthOrder": "second"
+        }
+      },
+      "description": "小学校就学前のきょうだいがいる場合、第2子は保育料を軽減。川崎市の例（2024年4月から拡充）：保護者の収入や上の子の年齢、施設の制限等に関係なく全ての家庭で半額",
+      "calculationMethod": "保育料は世帯の所得によって異なるため、金額は0円として計算",
+      "metadata": {
+        "sourceUrl": "https://www.city.yokohama.lg.jp/kosodate-kyoiku/hoiku-yoji/shisetsu/riyou/riyouryo/riyouryosantei/default2019031902.html",
+        "sourceName": "神奈川県",
+        "lastUpdated": "2025-12-06",
+        "notes": "川崎市は2024年4月から拡充",
+        "disclaimer": "保育料は世帯の所得によって異なるため、本サイトでは金額を0円としています。"
+      }
+    },
+    {
+      "id": "kanagawa_hoikuryo_0_2_third",
+      "name": "保育料無償化（0-2歳・第3子以降）",
+      "type": "childcare_fee",
+      "category": "教育費補助",
+      "prefecture": "神奈川県",
+      "amount": 0,
+      "frequency": "yearly",
+      "conditions": {
+        "incomeLimit": {
+          "type": "none"
+        },
+        "childCondition": {
+          "minAge": 0,
+          "maxAge": 2,
+          "birthOrder": "third_or_more"
+        }
+      },
+      "description": "小学校就学前のきょうだいがいる場合、第3子は保育料0円。3〜5歳児クラスで第3子の場合は副食費の実費負担が免除",
+      "calculationMethod": "保育料は世帯の所得によって異なるため、金額は0円として計算",
+      "metadata": {
+        "sourceUrl": "https://www.city.yokohama.lg.jp/kosodate-kyoiku/hoiku-yoji/shisetsu/riyou/riyouryo/riyouryosantei/default2019031902.html",
+        "sourceName": "神奈川県",
+        "lastUpdated": "2025-12-06",
+        "notes": "3〜5歳児クラスで第3子の場合は副食費の実費負担が免除",
+        "disclaimer": "保育料は世帯の所得によって異なるため、本サイトでは金額を0円としています。"
+      }
+    },
+    {
+      "id": "kanagawa_shussan_ikuji_ichijikin",
+      "name": "出産育児一時金",
+      "type": "childbirth_support",
+      "category": "出産・育児支援",
+      "prefecture": "神奈川県",
+      "amount": 500000,
+      "frequency": "once",
+      "conditions": {
+        "incomeLimit": {
+          "type": "none"
+        },
+        "childCondition": {
+          "minAge": 0,
+          "maxAge": 0,
+          "birthOrder": "any"
+        }
+      },
+      "description": "出産時に50万円を支給（国の制度）",
+      "calculationMethod": "出産1回あたり50万円（一時金）",
+      "metadata": {
+        "sourceUrl": "https://www.mhlw.go.jp/",
+        "sourceName": "厚生労働省",
+        "lastUpdated": "2025-12-06",
+        "notes": "令和5年4月より50万円に引き上げ"
+      }
+    }
+  ]
+}

@@ -1,0 +1,255 @@
+{
+  "prefecture": "千葉県",
+  "lastUpdated": "2025-12-06",
+  "officialUrl": "https://www.pref.chiba.lg.jp/cate/kfk/fukushi/kosodate/index.html",
+  "policies": [
+    {
+      "id": "chiba_jido_teate",
+      "name": "児童手当",
+      "type": "childcare_allowance",
+      "category": "現金給付",
+      "prefecture": "千葉県",
+      "amount": "variable",
+      "frequency": "monthly",
+      "conditions": {
+        "incomeLimit": {
+          "type": "none"
+        },
+        "childCondition": {
+          "minAge": 0,
+          "maxAge": 18,
+          "birthOrder": "any"
+        }
+      },
+      "description": "国の制度。2024年12月から所得制限撤廃、全世帯が対象。2024年10月から高校生年代（18歳）まで対象拡大",
+      "calculationMethod": "年齢と子供の順序により金額が変動（0-2歳: 月15,000円、3-18歳: 月10,000円、第3子以降（3歳〜小学生）: 月30,000円※2025年4月から）",
+      "ageBasedAmounts": [
+        {
+          "minAge": 0,
+          "maxAge": 2,
+          "amount": 15000,
+          "frequency": "monthly",
+          "description": "0-2歳（第1・2子）"
+        },
+        {
+          "minAge": 3,
+          "maxAge": 18,
+          "amount": 10000,
+          "frequency": "monthly",
+          "description": "3-18歳（第1・2子）"
+        }
+      ],
+      "metadata": {
+        "sourceUrl": "https://www.cfa.go.jp/policies/kokoseido/jidouteate/annai",
+        "sourceName": "こども家庭庁",
+        "lastUpdated": "2025-12-06",
+        "notes": "2024年12月から所得制限撤廃。2025年4月から第3子以降（3歳〜小学生）は月30,000円に増額予定。市区町村の窓口（公務員の場合は勤務先）に認定請求書を提出"
+      }
+    },
+    {
+      "id": "chiba_high_school_national",
+      "name": "高校授業料無償化（国制度）",
+      "type": "high_school_tuition",
+      "category": "教育費補助",
+      "prefecture": "千葉県",
+      "amount": 118800,
+      "frequency": "yearly",
+      "conditions": {
+        "incomeLimit": {
+          "type": "none"
+        },
+        "childCondition": {
+          "minAge": 15,
+          "maxAge": 17,
+          "birthOrder": "any"
+        }
+      },
+      "description": "2025年度から所得制限撤廃、全生徒に年間11万8,800円を支給（国の制度）",
+      "calculationMethod": "年額11万8,800円 × 3年 = 356,400円",
+      "metadata": {
+        "sourceUrl": "https://www.pref.chiba.lg.jp/gakuji/shiritsutou/gakuhi-josei/genmen/genmen.html",
+        "sourceName": "千葉県",
+        "lastUpdated": "2025-12-06",
+        "notes": "2025年度から所得制限撤廃"
+      }
+    },
+    {
+      "id": "chiba_high_school_private_tiered",
+      "name": "私立高校授業料減免制度（千葉県独自）",
+      "type": "high_school_tuition",
+      "category": "教育費補助",
+      "prefecture": "千葉県",
+      "amount": "variable",
+      "frequency": "yearly",
+      "conditions": {
+        "incomeLimit": {
+          "type": "tiered",
+          "tiers": [
+            {
+              "threshold": 6400000,
+              "amount": 396000,
+              "description": "年収640万円未満程度：最大39万6,000円"
+            },
+            {
+              "threshold": 7500000,
+              "amount": 200000,
+              "description": "年収750万円未満程度：減免制度適用"
+            }
+          ]
+        },
+        "childCondition": {
+          "minAge": 15,
+          "maxAge": 17,
+          "birthOrder": "any"
+        }
+      },
+      "description": "千葉県独自の授業料減免制度。年収750万円未満程度の世帯に支援",
+      "calculationMethod": "年収に応じて変動。2026年度から全世帯が年間最大45万7,000円まで支給予定",
+      "ageBasedAmounts": [],
+      "metadata": {
+        "sourceUrl": "https://www.pref.chiba.lg.jp/gakuji/shiritsutou/gakuhi-josei/genmen/genmen.html",
+        "sourceName": "千葉県",
+        "lastUpdated": "2025-12-06",
+        "notes": "千葉県外の私立高校に通う場合は対象外"
+      }
+    },
+    {
+      "id": "chiba_medical_expense",
+      "name": "子ども医療費助成",
+      "type": "medical_expense",
+      "category": "医療費補助",
+      "prefecture": "千葉県",
+      "amount": 0,
+      "frequency": "yearly",
+      "conditions": {
+        "incomeLimit": {
+          "type": "none"
+        },
+        "childCondition": {
+          "minAge": 0,
+          "maxAge": 18,
+          "birthOrder": "any"
+        }
+      },
+      "description": "0歳から18歳年度末までの医療費自己負担分を全額助成（市町村により実施状況が異なる）。千葉市・船橋市など多くの自治体で18歳まで対象。通院・入院ともに窓口負担なし",
+      "calculationMethod": "年齢別の医療費統計データに基づき動的に計算。0歳から18歳までの累計で約232万円の助成が見込まれます（統計平均値）",
+      "metadata": {
+        "sourceUrl": "https://www.city.chiba.jp/kodomomirai/kodomomirai/kikaku/kodomoiryouhi.html",
+        "sourceName": "千葉県",
+        "lastUpdated": "2025-12-08",
+        "notes": "千葉市・船橋市などで18歳まで対象。市町村により制度が異なる。金額は厚生労働省「国民医療費の概況」に基づく統計平均値を使用",
+        "disclaimer": "この金額は統計データに基づく概算です。実際の医療費は個人の健康状態により大きく異なります。市町村により制度が異なるため、正確な助成額は各自治体にお問い合わせください。"
+      }
+    },
+    {
+      "id": "chiba_hoikuryo_3_5",
+      "name": "保育料無償化（3-5歳）",
+      "type": "childcare_fee",
+      "category": "教育費補助",
+      "prefecture": "千葉県",
+      "amount": 0,
+      "frequency": "yearly",
+      "conditions": {
+        "incomeLimit": {
+          "type": "none"
+        },
+        "childCondition": {
+          "minAge": 3,
+          "maxAge": 5,
+          "birthOrder": "any"
+        }
+      },
+      "description": "3歳児から5歳児までの全ての子どもの保育料が無償化（国の制度）",
+      "calculationMethod": "保育料は世帯の所得によって異なるため、金額は0円として計算",
+      "metadata": {
+        "sourceUrl": "https://www.city.chiba.jp/kodomomirai/yojikyoiku/unei/hoikuryou29.html",
+        "sourceName": "千葉県",
+        "lastUpdated": "2025-12-06",
+        "disclaimer": "保育料は世帯の所得によって異なるため、本サイトでは金額を0円としています。"
+      }
+    },
+    {
+      "id": "chiba_hoikuryo_0_2_second",
+      "name": "保育料軽減（0-2歳・第2子）",
+      "type": "childcare_fee",
+      "category": "教育費補助",
+      "prefecture": "千葉県",
+      "amount": 0,
+      "frequency": "yearly",
+      "conditions": {
+        "incomeLimit": {
+          "type": "none"
+        },
+        "childCondition": {
+          "minAge": 0,
+          "maxAge": 2,
+          "birthOrder": "second"
+        }
+      },
+      "description": "小学校就学前のお子さんが施設を同時に利用される場合、第2子は基準額の半額",
+      "calculationMethod": "保育料は世帯の所得によって異なるため、金額は0円として計算",
+      "metadata": {
+        "sourceUrl": "https://www.city.chiba.jp/kodomomirai/yojikyoiku/unei/hoikuryou29.html",
+        "sourceName": "千葉県",
+        "lastUpdated": "2025-12-06",
+        "notes": "市川市の例：第2子以降の保育料に対して、通常の補助に加えて月額2万5,000円を補助",
+        "disclaimer": "保育料は世帯の所得によって異なるため、本サイトでは金額を0円としています。"
+      }
+    },
+    {
+      "id": "chiba_hoikuryo_0_2_third",
+      "name": "保育料無償化（0-2歳・第3子以降）",
+      "type": "childcare_fee",
+      "category": "教育費補助",
+      "prefecture": "千葉県",
+      "amount": 0,
+      "frequency": "yearly",
+      "conditions": {
+        "incomeLimit": {
+          "type": "none"
+        },
+        "childCondition": {
+          "minAge": 0,
+          "maxAge": 2,
+          "birthOrder": "third_or_more"
+        }
+      },
+      "description": "小学校就学前のお子さんが施設を同時に利用される場合、第3子以降は無料",
+      "calculationMethod": "保育料は世帯の所得によって異なるため、金額は0円として計算",
+      "metadata": {
+        "sourceUrl": "https://www.city.chiba.jp/kodomomirai/yojikyoiku/unei/hoikuryou29.html",
+        "sourceName": "千葉県",
+        "lastUpdated": "2025-12-06",
+        "notes": "全世帯の第3子以降は、副食（おかず・おやつ等）の費用も免除",
+        "disclaimer": "保育料は世帯の所得によって異なるため、本サイトでは金額を0円としています。"
+      }
+    },
+    {
+      "id": "chiba_shussan_ikuji_ichijikin",
+      "name": "出産育児一時金",
+      "type": "childbirth_support",
+      "category": "出産・育児支援",
+      "prefecture": "千葉県",
+      "amount": 500000,
+      "frequency": "once",
+      "conditions": {
+        "incomeLimit": {
+          "type": "none"
+        },
+        "childCondition": {
+          "minAge": 0,
+          "maxAge": 0,
+          "birthOrder": "any"
+        }
+      },
+      "description": "出産時に50万円を支給（国の制度）",
+      "calculationMethod": "出産1回あたり50万円（一時金）",
+      "metadata": {
+        "sourceUrl": "https://www.mhlw.go.jp/",
+        "sourceName": "厚生労働省",
+        "lastUpdated": "2025-12-06",
+        "notes": "令和5年4月より50万円に引き上げ"
+      }
+    }
+  ]
+}

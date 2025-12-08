@@ -1,0 +1,232 @@
+{
+  "prefecture": "埼玉県",
+  "lastUpdated": "2025-12-06",
+  "officialUrl": "https://www.pref.saitama.lg.jp/kenko/jidofukushi/kosodateshien/index.html",
+  "policies": [
+    {
+      "id": "saitama_jido_teate",
+      "name": "児童手当",
+      "type": "childcare_allowance",
+      "category": "現金給付",
+      "prefecture": "埼玉県",
+      "amount": "variable",
+      "frequency": "monthly",
+      "conditions": {
+        "incomeLimit": {
+          "type": "none"
+        },
+        "childCondition": {
+          "minAge": 0,
+          "maxAge": 18,
+          "birthOrder": "any"
+        }
+      },
+      "description": "国の制度。2024年12月から所得制限撤廃、全世帯が対象。2024年10月から高校生年代（18歳）まで対象拡大",
+      "calculationMethod": "年齢と子供の順序により金額が変動（0-2歳: 月15,000円、3-18歳: 月10,000円、第3子以降（3歳〜小学生）: 月30,000円※2025年4月から）",
+      "ageBasedAmounts": [
+        {
+          "minAge": 0,
+          "maxAge": 2,
+          "amount": 15000,
+          "frequency": "monthly",
+          "description": "0-2歳（第1・2子）"
+        },
+        {
+          "minAge": 3,
+          "maxAge": 18,
+          "amount": 10000,
+          "frequency": "monthly",
+          "description": "3-18歳（第1・2子）"
+        }
+      ],
+      "metadata": {
+        "sourceUrl": "https://www.cfa.go.jp/policies/kokoseido/jidouteate/annai",
+        "sourceName": "こども家庭庁",
+        "lastUpdated": "2025-12-06",
+        "notes": "2024年12月から所得制限撤廃。2025年4月から第3子以降（3歳〜小学生）は月30,000円に増額予定。毎年2月、4月、6月、8月、10月、12月（偶数月）に、前月分まで（2か月分）を支給"
+      }
+    },
+    {
+      "id": "saitama_high_school_national",
+      "name": "高校授業料無償化（国制度）",
+      "type": "high_school_tuition",
+      "category": "教育費補助",
+      "prefecture": "埼玉県",
+      "amount": 118800,
+      "frequency": "yearly",
+      "conditions": {
+        "incomeLimit": {
+          "type": "none"
+        },
+        "childCondition": {
+          "minAge": 15,
+          "maxAge": 17,
+          "birthOrder": "any"
+        }
+      },
+      "description": "2025年度から所得制限撤廃、全生徒に年間11万8,800円を支給（国の制度）",
+      "calculationMethod": "年額11万8,800円 × 3年 = 356,400円",
+      "metadata": {
+        "sourceUrl": "https://www.pref.saitama.lg.jp/a0204/fubofutan2.html",
+        "sourceName": "埼玉県",
+        "lastUpdated": "2025-12-06",
+        "notes": "2025年度から所得制限撤廃"
+      }
+    },
+    {
+      "id": "saitama_high_school_private_tiered",
+      "name": "私立高校授業料支援（埼玉県独自）",
+      "type": "high_school_tuition",
+      "category": "教育費補助",
+      "prefecture": "埼玉県",
+      "amount": "variable",
+      "frequency": "yearly",
+      "conditions": {
+        "incomeLimit": {
+          "type": "tiered",
+          "tiers": [
+            {
+              "threshold": 5000000,
+              "amount": 200000,
+              "description": "年収500万円未満：授業料14,000円 + 施設費20万円"
+            },
+            {
+              "threshold": 5900000,
+              "amount": 14000,
+              "description": "年収500-590万円未満：授業料14,000円"
+            },
+            {
+              "threshold": 7200000,
+              "amount": 291200,
+              "description": "年収590-720万円未満：授業料29万1,200円"
+            }
+          ]
+        },
+        "childCondition": {
+          "minAge": 15,
+          "maxAge": 17,
+          "birthOrder": "any"
+        }
+      },
+      "description": "埼玉県独自の私立高校授業料上乗せ補助。年収720万円未満の世帯に段階的に支援",
+      "calculationMethod": "年収に応じて変動。2026年度以降は所得制限なく、全世帯が年間最大45万7,000円まで支給予定",
+      "ageBasedAmounts": [],
+      "metadata": {
+        "sourceUrl": "https://www.pref.saitama.lg.jp/a0204/fubofutan2.html",
+        "sourceName": "埼玉県",
+        "lastUpdated": "2025-12-06",
+        "notes": "県内私立全日制高校のみ。年収609万円未満の1年生は入学金10万円も支援"
+      }
+    },
+    {
+      "id": "saitama_medical_expense",
+      "name": "子ども医療費助成",
+      "type": "medical_expense",
+      "category": "医療費補助",
+      "prefecture": "埼玉県",
+      "amount": 0,
+      "frequency": "yearly",
+      "conditions": {
+        "incomeLimit": {
+          "type": "none"
+        },
+        "childCondition": {
+          "minAge": 0,
+          "maxAge": 18,
+          "birthOrder": "any"
+        }
+      },
+      "description": "0歳から18歳年度末までの医療費自己負担分を全額助成（市町村により実施状況が異なる）。さいたま市など多くの自治体で18歳まで対象。通院・入院ともに窓口負担なし",
+      "calculationMethod": "年齢別の医療費統計データに基づき動的に計算。0歳から18歳までの累計で約232万円の助成が見込まれます（統計平均値）",
+      "metadata": {
+        "sourceUrl": "https://www.city.saitama.lg.jp/003/001/011/p006270.html",
+        "sourceName": "埼玉県",
+        "lastUpdated": "2025-12-08",
+        "notes": "市町村により18歳まで対象（さいたま市など）。所得制限は市町村により異なる。金額は厚生労働省「国民医療費の概況」に基づく統計平均値を使用",
+        "disclaimer": "この金額は統計データに基づく概算です。実際の医療費は個人の健康状態により大きく異なります。市町村により制度が異なるため、正確な助成額は各自治体にお問い合わせください。"
+      }
+    },
+    {
+      "id": "saitama_hoikuryo_3_5",
+      "name": "保育料無償化（3-5歳）",
+      "type": "childcare_fee",
+      "category": "教育費補助",
+      "prefecture": "埼玉県",
+      "amount": 0,
+      "frequency": "yearly",
+      "conditions": {
+        "incomeLimit": {
+          "type": "none"
+        },
+        "childCondition": {
+          "minAge": 3,
+          "maxAge": 5,
+          "birthOrder": "any"
+        }
+      },
+      "description": "3歳児から5歳児までの全ての子どもの保育料が無償化（国の制度）",
+      "calculationMethod": "保育料は世帯の所得によって異なるため、金額は0円として計算",
+      "metadata": {
+        "sourceUrl": "https://www.pref.saitama.lg.jp/b0616/hoiku-jinzai/tashisetai.html",
+        "sourceName": "埼玉県",
+        "lastUpdated": "2025-12-06",
+        "disclaimer": "保育料は世帯の所得によって異なるため、本サイトでは金額を0円としています。"
+      }
+    },
+    {
+      "id": "saitama_hoikuryo_0_2_third",
+      "name": "保育料無償化（0-2歳・第3子以降）",
+      "type": "childcare_fee",
+      "category": "教育費補助",
+      "prefecture": "埼玉県",
+      "amount": 0,
+      "frequency": "yearly",
+      "conditions": {
+        "incomeLimit": {
+          "type": "none"
+        },
+        "childCondition": {
+          "minAge": 0,
+          "maxAge": 2,
+          "birthOrder": "third_or_more"
+        }
+      },
+      "description": "満3歳未満で第3子以降の児童の保育料について、最年長のこどもの年齢にかかわらず無償化（埼玉県の制度）",
+      "calculationMethod": "保育料は世帯の所得によって異なるため、金額は0円として計算",
+      "metadata": {
+        "sourceUrl": "https://www.pref.saitama.lg.jp/b0616/hoiku-jinzai/tashisetai.html",
+        "sourceName": "埼玉県",
+        "lastUpdated": "2025-12-06",
+        "notes": "全世帯の第3子以降は、副食（おかず・おやつ等）の費用も免除",
+        "disclaimer": "保育料は世帯の所得によって異なるため、本サイトでは金額を0円としています。"
+      }
+    },
+    {
+      "id": "saitama_shussan_ikuji_ichijikin",
+      "name": "出産育児一時金",
+      "type": "childbirth_support",
+      "category": "出産・育児支援",
+      "prefecture": "埼玉県",
+      "amount": 500000,
+      "frequency": "once",
+      "conditions": {
+        "incomeLimit": {
+          "type": "none"
+        },
+        "childCondition": {
+          "minAge": 0,
+          "maxAge": 0,
+          "birthOrder": "any"
+        }
+      },
+      "description": "出産時に50万円を支給（国の制度）",
+      "calculationMethod": "出産1回あたり50万円（一時金）",
+      "metadata": {
+        "sourceUrl": "https://www.mhlw.go.jp/",
+        "sourceName": "厚生労働省",
+        "lastUpdated": "2025-12-06",
+        "notes": "令和5年4月より50万円に引き上げ"
+      }
+    }
+  ]
+}

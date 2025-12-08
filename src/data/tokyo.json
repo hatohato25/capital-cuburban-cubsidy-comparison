@@ -1,0 +1,452 @@
+{
+  "prefecture": "東京都",
+  "lastUpdated": "2025-12-06",
+  "officialUrl": "https://www.fukushi.metro.tokyo.lg.jp/kodomo/kosodate",
+  "policies": [
+    {
+      "id": "tokyo_018_support",
+      "name": "018サポート",
+      "type": "018_support",
+      "category": "現金給付",
+      "prefecture": "東京都",
+      "amount": 60000,
+      "frequency": "yearly",
+      "conditions": {
+        "incomeLimit": {
+          "type": "none"
+        },
+        "childCondition": {
+          "minAge": 0,
+          "maxAge": 18,
+          "birthOrder": "any"
+        }
+      },
+      "description": "東京都独自の子育て支援施策。0歳から18歳に達する日以後の最初の3月31日までの子ども1人当たり月額5,000円（年額6万円）を支給",
+      "calculationMethod": "月額5,000円 × 12ヶ月 × 19年 = 1,140,000円",
+      "metadata": {
+        "sourceUrl": "https://www.fukushi.metro.tokyo.lg.jp/kodomo/kosodate/018/",
+        "sourceName": "東京都福祉局",
+        "lastUpdated": "2025-12-06",
+        "notes": "所得制限なし。各月1日時点の在住状況に応じて支給額が変わる"
+      }
+    },
+    {
+      "id": "tokyo_jido_teate",
+      "name": "児童手当",
+      "type": "childcare_allowance",
+      "category": "現金給付",
+      "prefecture": "東京都",
+      "amount": "variable",
+      "frequency": "monthly",
+      "conditions": {
+        "incomeLimit": {
+          "type": "none"
+        },
+        "childCondition": {
+          "minAge": 0,
+          "maxAge": 18,
+          "birthOrder": "any"
+        }
+      },
+      "description": "国の制度。2024年12月から所得制限撤廃、全世帯が対象。2024年10月から高校生年代（18歳）まで対象拡大",
+      "calculationMethod": "年齢と子供の順序により金額が変動（0-2歳: 月15,000円、3-18歳: 月10,000円、第3子以降（3歳〜小学生）: 月30,000円※2025年4月から）",
+      "ageBasedAmounts": [
+        {
+          "minAge": 0,
+          "maxAge": 2,
+          "amount": 15000,
+          "frequency": "monthly",
+          "description": "0-2歳（第1・2子）"
+        },
+        {
+          "minAge": 3,
+          "maxAge": 18,
+          "amount": 10000,
+          "frequency": "monthly",
+          "description": "3-18歳（第1・2子）"
+        }
+      ],
+      "metadata": {
+        "sourceUrl": "https://www.cfa.go.jp/policies/kokoseido/jidouteate/annai",
+        "sourceName": "こども家庭庁",
+        "lastUpdated": "2025-12-06",
+        "notes": "2024年12月から所得制限撤廃。2025年4月から第3子以降（3歳〜小学生）は月30,000円に増額予定"
+      }
+    },
+    {
+      "id": "tokyo_school_lunch_free",
+      "name": "公立小中学校給食費無償化",
+      "type": "school_lunch",
+      "category": "教育費補助",
+      "prefecture": "東京都",
+      "amount": 60000,
+      "frequency": "yearly",
+      "conditions": {
+        "incomeLimit": {
+          "type": "none"
+        },
+        "childCondition": {
+          "minAge": 6,
+          "maxAge": 14,
+          "birthOrder": "any"
+        }
+      },
+      "description": "東京23区全域で実施されている給食費無償化。公立小中学校の給食費が全額無償",
+      "calculationMethod": "年額6万円 × 9年 = 540,000円",
+      "metadata": {
+        "sourceUrl": "https://www.kyoiku.metro.tokyo.lg.jp/information/press/2024/07/2024071602",
+        "sourceName": "東京都",
+        "lastUpdated": "2025-12-06",
+        "notes": "全23区で実施済み。都内51自治体（62自治体中82%）が無償化を実施または計画中"
+      }
+    },
+    {
+      "id": "tokyo_high_school_public_free",
+      "name": "都立高校授業料実質無償化",
+      "type": "high_school_tuition",
+      "category": "教育費補助",
+      "prefecture": "東京都",
+      "amount": 118800,
+      "frequency": "yearly",
+      "conditions": {
+        "incomeLimit": {
+          "type": "none"
+        },
+        "childCondition": {
+          "minAge": 15,
+          "maxAge": 17,
+          "birthOrder": "any"
+        }
+      },
+      "description": "都立高校の授業料を実質無償化。2025年度は所得制限が完全に撤廃",
+      "calculationMethod": "年額11万8,800円 × 3年 = 356,400円",
+      "metadata": {
+        "sourceUrl": "https://www.metro.tokyo.lg.jp/information/press/2025/06/2025062304",
+        "sourceName": "東京都",
+        "lastUpdated": "2025-12-06",
+        "notes": "所得制限なし"
+      }
+    },
+    {
+      "id": "tokyo_high_school_private_free",
+      "name": "私立高校授業料実質無償化",
+      "type": "high_school_tuition",
+      "category": "教育費補助",
+      "prefecture": "東京都",
+      "amount": 490000,
+      "frequency": "yearly",
+      "conditions": {
+        "incomeLimit": {
+          "type": "none"
+        },
+        "childCondition": {
+          "minAge": 15,
+          "maxAge": 17,
+          "birthOrder": "any"
+        }
+      },
+      "description": "私立高校の授業料を最大49万円まで支援。2025年度は所得制限が完全に撤廃",
+      "calculationMethod": "年額49万円 × 3年 = 1,470,000円",
+      "metadata": {
+        "sourceUrl": "https://www.metro.tokyo.lg.jp/information/press/2025/06/2025062304",
+        "sourceName": "東京都",
+        "lastUpdated": "2025-12-06",
+        "notes": "都内私立高校平均授業料相当を上限に助成。所得制限なし"
+      }
+    },
+    {
+      "id": "tokyo_medical_expense",
+      "name": "子ども医療費助成（マル乳・マル子・マル青）",
+      "type": "medical_expense",
+      "category": "医療費補助",
+      "prefecture": "東京都",
+      "amount": 0,
+      "frequency": "yearly",
+      "conditions": {
+        "incomeLimit": {
+          "type": "none"
+        },
+        "childCondition": {
+          "minAge": 0,
+          "maxAge": 18,
+          "birthOrder": "any"
+        }
+      },
+      "description": "0歳〜18歳年度末までの医療費自己負担分を全額助成（所得制限なし）。マル乳（0歳-就学前）、マル子（小1-中3）、マル青（中卒後-18歳年度末）の3段階で構成。通院・入院ともに窓口負担なし",
+      "calculationMethod": "年齢別の医療費統計データに基づき動的に計算。0歳から18歳までの累計で約232万円の助成が見込まれます（統計平均値）",
+      "metadata": {
+        "sourceUrl": "https://www.guide.metro.tokyo.lg.jp/vaccination/jyosei/index.html",
+        "sourceName": "東京都福祉局",
+        "lastUpdated": "2025-12-08",
+        "notes": "所得制限なし。通院・入院ともに全額助成。医療証は毎年10月1日に更新。金額は厚生労働省「国民医療費の概況」に基づく統計平均値を使用",
+        "disclaimer": "この金額は統計データに基づく概算です。実際の医療費は個人の健康状態により大きく異なります。正確な助成額は各自治体にお問い合わせください。"
+      }
+    },
+    {
+      "id": "tokyo_hoikuryo_3_5",
+      "name": "保育料無償化（3-5歳）",
+      "type": "childcare_fee",
+      "category": "教育費補助",
+      "prefecture": "東京都",
+      "amount": 0,
+      "frequency": "yearly",
+      "conditions": {
+        "incomeLimit": {
+          "type": "none"
+        },
+        "childCondition": {
+          "minAge": 3,
+          "maxAge": 5,
+          "birthOrder": "any"
+        }
+      },
+      "description": "3〜5歳児クラスの保育料が無料（国の制度）",
+      "calculationMethod": "保育料は世帯の所得によって異なるため、金額は0円として計算",
+      "metadata": {
+        "sourceUrl": "https://www.fukushi.metro.tokyo.lg.jp/kodomo/hoiku/mushouka",
+        "sourceName": "東京都福祉局",
+        "lastUpdated": "2025-12-06",
+        "notes": "幼稚園については月額上限2万5,700円",
+        "disclaimer": "保育料は世帯の所得によって異なるため、本サイトでは金額を0円としています。"
+      }
+    },
+    {
+      "id": "tokyo_hoikuryo_0_2_first_child",
+      "name": "保育料無償化（0-2歳・第1子）",
+      "type": "childcare_fee",
+      "category": "教育費補助",
+      "prefecture": "東京都",
+      "amount": 0,
+      "frequency": "yearly",
+      "conditions": {
+        "incomeLimit": {
+          "type": "none"
+        },
+        "childCondition": {
+          "minAge": 0,
+          "maxAge": 2,
+          "birthOrder": "first"
+        }
+      },
+      "description": "2025年9月から第1子の保育料も無償化（東京都独自施策）",
+      "calculationMethod": "保育料は世帯の所得によって異なるため、金額は0円として計算",
+      "metadata": {
+        "sourceUrl": "https://www.fukushi.metro.tokyo.lg.jp/kodomo/hoiku/mushouka",
+        "sourceName": "東京都福祉局",
+        "lastUpdated": "2025-12-06",
+        "notes": "2025年9月から実施。所得制限なし",
+        "disclaimer": "保育料は世帯の所得によって異なるため、本サイトでは金額を0円としています。"
+      }
+    },
+    {
+      "id": "tokyo_shussan_ouen_ninshin",
+      "name": "出産・子育て応援事業（妊娠時）",
+      "type": "childbirth_support",
+      "category": "出産・育児支援",
+      "prefecture": "東京都",
+      "amount": 50000,
+      "frequency": "once",
+      "conditions": {
+        "incomeLimit": {
+          "type": "none"
+        },
+        "childCondition": {
+          "minAge": 0,
+          "maxAge": 0,
+          "birthOrder": "any"
+        }
+      },
+      "description": "妊娠時に妊婦1人あたり5万円相当を支給",
+      "calculationMethod": "妊娠1回あたり5万円（一時金）",
+      "metadata": {
+        "sourceUrl": "https://www.fukushi.metro.tokyo.lg.jp/kodomo/shussan/tokyo_shussankosodateouen",
+        "sourceName": "東京都福祉局",
+        "lastUpdated": "2025-12-06"
+      }
+    },
+    {
+      "id": "tokyo_shussan_ouen_birth",
+      "name": "出産・子育て応援事業（出産後）",
+      "type": "childbirth_support",
+      "category": "出産・育児支援",
+      "prefecture": "東京都",
+      "amount": 100000,
+      "frequency": "once",
+      "conditions": {
+        "incomeLimit": {
+          "type": "none"
+        },
+        "childCondition": {
+          "minAge": 0,
+          "maxAge": 0,
+          "birthOrder": "any"
+        }
+      },
+      "description": "出産後に児童1人当たり10万円相当を支給（国の5万円 + 東京都の5万円）",
+      "calculationMethod": "出産1回あたり10万円（一時金）",
+      "metadata": {
+        "sourceUrl": "https://www.fukushi.metro.tokyo.lg.jp/kodomo/shussan/tokyo_shussankosodateouen",
+        "sourceName": "東京都福祉局",
+        "lastUpdated": "2025-12-06"
+      }
+    },
+    {
+      "id": "tokyo_baby_first",
+      "name": "赤ちゃんファーストギフト",
+      "type": "childbirth_support",
+      "category": "出産・育児支援",
+      "prefecture": "東京都",
+      "amount": 100000,
+      "frequency": "once",
+      "conditions": {
+        "incomeLimit": {
+          "type": "none"
+        },
+        "childCondition": {
+          "minAge": 0,
+          "maxAge": 0,
+          "birthOrder": "any"
+        }
+      },
+      "description": "子供を産み育てる家庭に10万円相当の育児用品や子育て支援サービス等を選べるギフトカードを支給",
+      "calculationMethod": "出産1回あたり10万円相当（ギフト）",
+      "metadata": {
+        "sourceUrl": "https://www.fukushi.metro.tokyo.lg.jp/kodomo/shussan/tokyo_shussankosodateouen",
+        "sourceName": "東京都福祉局",
+        "lastUpdated": "2025-12-06"
+      }
+    },
+    {
+      "id": "tokyo_kajiikuji_package_1st",
+      "name": "家事・育児パッケージ（第1子）",
+      "type": "childbirth_support",
+      "category": "出産・育児支援",
+      "prefecture": "東京都",
+      "amount": 60000,
+      "frequency": "once",
+      "conditions": {
+        "incomeLimit": {
+          "type": "none"
+        },
+        "childCondition": {
+          "minAge": 1,
+          "maxAge": 2,
+          "birthOrder": "first"
+        }
+      },
+      "description": "1歳前後または2歳前後の第1子を育てる家庭に6万円分のサービスを提供",
+      "calculationMethod": "第1子あたり6万円（一時金）",
+      "metadata": {
+        "sourceUrl": "https://www.fukushi.metro.tokyo.lg.jp/kodomo/shussan/tokyo_shussankosodateouen",
+        "sourceName": "東京都福祉局",
+        "lastUpdated": "2025-12-06"
+      }
+    },
+    {
+      "id": "tokyo_kajiikuji_package_2nd",
+      "name": "家事・育児パッケージ（第2子）",
+      "type": "childbirth_support",
+      "category": "出産・育児支援",
+      "prefecture": "東京都",
+      "amount": 70000,
+      "frequency": "once",
+      "conditions": {
+        "incomeLimit": {
+          "type": "none"
+        },
+        "childCondition": {
+          "minAge": 1,
+          "maxAge": 2,
+          "birthOrder": "second"
+        }
+      },
+      "description": "1歳前後または2歳前後の第2子を育てる家庭に7万円分のサービスを提供",
+      "calculationMethod": "第2子あたり7万円（一時金）",
+      "metadata": {
+        "sourceUrl": "https://www.fukushi.metro.tokyo.lg.jp/kodomo/shussan/tokyo_shussankosodateouen",
+        "sourceName": "東京都福祉局",
+        "lastUpdated": "2025-12-06"
+      }
+    },
+    {
+      "id": "tokyo_kajiikuji_package_3rd",
+      "name": "家事・育児パッケージ（第3子以降）",
+      "type": "childbirth_support",
+      "category": "出産・育児支援",
+      "prefecture": "東京都",
+      "amount": 80000,
+      "frequency": "once",
+      "conditions": {
+        "incomeLimit": {
+          "type": "none"
+        },
+        "childCondition": {
+          "minAge": 1,
+          "maxAge": 2,
+          "birthOrder": "third_or_more"
+        }
+      },
+      "description": "1歳前後または2歳前後の第3子以降を育てる家庭に8万円分のサービスを提供",
+      "calculationMethod": "第3子以降あたり8万円（一時金）",
+      "metadata": {
+        "sourceUrl": "https://www.fukushi.metro.tokyo.lg.jp/kodomo/shussan/tokyo_shussankosodateouen",
+        "sourceName": "東京都福祉局",
+        "lastUpdated": "2025-12-06"
+      }
+    },
+    {
+      "id": "tokyo_shussan_ikuji_ichijikin",
+      "name": "出産育児一時金",
+      "type": "childbirth_support",
+      "category": "出産・育児支援",
+      "prefecture": "東京都",
+      "amount": 500000,
+      "frequency": "once",
+      "conditions": {
+        "incomeLimit": {
+          "type": "none"
+        },
+        "childCondition": {
+          "minAge": 0,
+          "maxAge": 0,
+          "birthOrder": "any"
+        }
+      },
+      "description": "出産時に50万円を支給（国の制度）",
+      "calculationMethod": "出産1回あたり50万円（一時金）",
+      "metadata": {
+        "sourceUrl": "https://www.mhlw.go.jp/",
+        "sourceName": "厚生労働省",
+        "lastUpdated": "2025-12-06",
+        "notes": "令和5年4月より50万円に引き上げ"
+      }
+    },
+    {
+      "id": "tokyo_toritsu_daigaku_free",
+      "name": "都立大学等授業料無償化",
+      "type": "university_tuition",
+      "category": "教育費補助",
+      "prefecture": "東京都",
+      "amount": 660000,
+      "frequency": "yearly",
+      "conditions": {
+        "incomeLimit": {
+          "type": "none"
+        },
+        "childCondition": {
+          "minAge": 18,
+          "maxAge": 21,
+          "birthOrder": "any"
+        }
+      },
+      "description": "都立大学等の授業料を全額免除（所得制限なし）。2025年度から多子世帯は入学料及び授業料を全額免除",
+      "calculationMethod": "年額約66万円 × 4年 = 約264万円（目安）",
+      "metadata": {
+        "sourceUrl": "https://www.houjin-tmu.ac.jp/topics/topics13247/",
+        "sourceName": "東京都立大学",
+        "lastUpdated": "2025-12-06",
+        "notes": "2024年度から所得制限撤廃。多子世帯（扶養する子供が3名以上）は入学料及び授業料を全額免除"
+      }
+    }
+  ]
+}

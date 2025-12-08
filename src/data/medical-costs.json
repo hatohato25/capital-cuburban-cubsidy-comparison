@@ -1,0 +1,111 @@
+{
+  "dataSource": {
+    "name": "厚生労働省「国民医療費の概況（令和2年度）」を基に推計",
+    "url": "https://www.mhlw.go.jp/toukei/saikin/hw/k-iryohi/20/index.html",
+    "year": 2020,
+    "lastUpdated": "2025-12-08",
+    "notes": "年齢別の医療費は統計データに基づく平均値です。個人の健康状態により実際の医療費は大きく異なります。"
+  },
+  "ageMedicalCosts": [
+    {
+      "age": 0,
+      "annualCost": 280000,
+      "description": "0歳児（乳児期は医療費が高い傾向）"
+    },
+    {
+      "age": 1,
+      "annualCost": 180000,
+      "description": "1歳児"
+    },
+    {
+      "age": 2,
+      "annualCost": 150000,
+      "description": "2歳児"
+    },
+    {
+      "age": 3,
+      "annualCost": 130000,
+      "description": "3歳児"
+    },
+    {
+      "age": 4,
+      "annualCost": 120000,
+      "description": "4歳児"
+    },
+    {
+      "age": 5,
+      "annualCost": 110000,
+      "description": "5歳児"
+    },
+    {
+      "age": 6,
+      "annualCost": 100000,
+      "description": "6歳児（小学生以降は3割負担）"
+    },
+    {
+      "age": 7,
+      "annualCost": 95000,
+      "description": "7歳児"
+    },
+    {
+      "age": 8,
+      "annualCost": 90000,
+      "description": "8歳児"
+    },
+    {
+      "age": 9,
+      "annualCost": 90000,
+      "description": "9歳児"
+    },
+    {
+      "age": 10,
+      "annualCost": 85000,
+      "description": "10歳児"
+    },
+    {
+      "age": 11,
+      "annualCost": 85000,
+      "description": "11歳児"
+    },
+    {
+      "age": 12,
+      "annualCost": 80000,
+      "description": "12歳児"
+    },
+    {
+      "age": 13,
+      "annualCost": 75000,
+      "description": "13歳児（中学生）"
+    },
+    {
+      "age": 14,
+      "annualCost": 75000,
+      "description": "14歳児"
+    },
+    {
+      "age": 15,
+      "annualCost": 70000,
+      "description": "15歳児（高校生）"
+    },
+    {
+      "age": 16,
+      "annualCost": 70000,
+      "description": "16歳児"
+    },
+    {
+      "age": 17,
+      "annualCost": 65000,
+      "description": "17歳児"
+    },
+    {
+      "age": 18,
+      "annualCost": 65000,
+      "description": "18歳児"
+    }
+  ],
+  "disclaimer": [
+    "この医療費は統計データに基づく概算です",
+    "実際の医療費は個人の健康状態により大きく異なります",
+    "正確な助成額は各自治体にお問い合わせください"
+  ]
+}

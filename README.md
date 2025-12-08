@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 首都圏子育て補助金比較サイト
 
-## Getting Started
+首都圏4都県（東京・埼玉・千葉・神奈川）の子育て補助金を簡単に比較できるWebアプリケーションです。
 
-First, run the development server:
+世帯年収とお子さんの情報を入力するだけで、各都県で受け取れる補助金の総額を自動計算し、わかりやすく比較表示します。
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🎯 このサイトでできること
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **補助金総額の比較**: 4都県の補助金総額を一目で比較
+- **詳細な内訳確認**: 各補助金制度の詳細情報を確認
+- **視覚的な比較**: グラフで補助金額を視覚的に把握
+- **リアルタイム計算**: 入力すると即座に計算結果を表示
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📊 計算対象の補助金
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 現金給付系
+- 児童手当（国制度）
+- 東京都018サポート
+- 出産・育児応援交付金
+- 出産応援ギフト（東京）
 
-## Learn More
+### 教育費補助系
+- 保育料無償化（0-2歳、3-5歳）
+- 公立小中学校給食費無償化
+- 高校授業料無償化（国制度・都県制度）
+- 私立高校授業料支援
+- 大学授業料減免
 
-To learn more about Next.js, take a look at the following resources:
+### 医療費補助系
+- 子ども医療費助成（0-18歳）
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚀 使い方
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **世帯年収を入力**: 世帯の合計年収（税込）を万円単位で入力
+2. **お子さんの情報を追加**: 「+ 追加」ボタンでお子さんの年齢を入力
+3. **自動計算**: 入力すると自動で各都県の補助金総額を計算
+4. **結果を確認**: ランキング形式で表示された結果を確認
+5. **詳細を見る**: 各都県のカードから「詳細を見る」で内訳を確認
 
-## Deploy on Vercel
+## ⚠️ 重要な注意事項
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 計算結果について
+- **概算値です**: 実際の受給額とは異なる場合があります
+- **最新情報の確認**: 制度は変更される可能性がありますので、必ず各自治体の公式サイトで最新情報を確認してください
+- **申請が必要**: 多くの補助金は申請が必要です。自動的に受け取れるわけではありません
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 計算に含まれていないもの
+- 市区町村独自の補助金・支援制度
+- 条件が複雑で一律に計算できない制度
+- 期間限定の特別給付金
+
+### 医療費助成について
+- **統計データに基づく概算**: 年齢別の平均医療費データを使用しています
+- **個人差が大きい**: 実際の医療費は個人の健康状態により大きく異なります
+- **神奈川県**: 市町村により制度が異なるため、保守的に0円として計算しています
+
+## 📝 データ更新について
+
+このサイトの補助金データは定期的に更新されますが、最新情報は各自治体の公式サイトで必ずご確認ください。
+
+### 主要な情報源
+- [こども家庭庁（児童手当）](https://www.cfa.go.jp/policies/kokoseido/jidouteate/)
+- [東京都福祉局（018サポート）](https://www.fukushi.metro.tokyo.lg.jp/kodomo/kosodate/018/)
+- 各都県の公式ホームページ
+
+## 🛠️ 技術スタック
+
+- **フレームワーク**: Next.js 16 (App Router)
+- **言語**: TypeScript
+- **スタイリング**: Tailwind CSS
+- **UIコンポーネント**: shadcn/ui
+- **グラフ**: Recharts
+- **テスト**: Vitest
+- **Lint/Format**: Biome
+- **デプロイ**: Vercel
+
+## 📄 ライセンス
+
+このプロジェクトはオープンソースです。
+
+## 🙏 免責事項
+
+- このサイトは情報提供を目的としており、正確性を保証するものではありません
+- 補助金の受給資格や金額は、各自治体の最新の制度をご確認ください
+- サイトの情報に基づく判断や行動の結果について、一切の責任を負いかねます
+- 制度の詳細や申請方法については、各自治体の窓口にお問い合わせください
+
+---
+
+**最終更新**: 2025年12月
+
+お子さんの健やかな成長を応援します！
