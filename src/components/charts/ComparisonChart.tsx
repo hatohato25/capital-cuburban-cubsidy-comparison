@@ -68,7 +68,7 @@ function CustomTooltip({ active, payload }: CustomTooltipProps) {
  * 横棒グラフで都県間の補助金総額を視覚的に比較
  */
 export function ComparisonChart({ results }: ComparisonChartProps) {
-  // グラフ用データを準備
+  // グラフ用データを準備（残り受給予定額で表示）
   const chartData = results.map((result) => ({
     prefecture: result.prefecture,
     totalAmount: result.totalAmount,

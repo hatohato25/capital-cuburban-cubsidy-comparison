@@ -147,7 +147,7 @@
       "type": "childcare_fee",
       "category": "教育費補助",
       "prefecture": "神奈川県",
-      "amount": 0,
+      "amount": 300000,
       "frequency": "yearly",
       "conditions": {
         "incomeLimit": {
@@ -160,12 +160,13 @@
         }
       },
       "description": "3歳児から5歳児までの全ての子どもの保育料が無償化（国の制度）",
-      "calculationMethod": "保育料は世帯の所得によって異なるため、金額は0円として計算",
+      "calculationMethod": "月額約2.5万円 × 12ヶ月 × 3年 = 90万円（平均値）",
       "metadata": {
         "sourceUrl": "https://www.pref.kanagawa.jp/docs/sy8/musyouka/2019musyouka.html",
         "sourceName": "神奈川県",
         "lastUpdated": "2025-12-06",
-        "disclaimer": "保育料は世帯の所得によって異なるため、本サイトでは金額を0円としています。"
+        "notes": "金額は内閣府の統計データに基づく平均値",
+        "disclaimer": "保育料は世帯の所得によって異なります。この金額は統計データに基づく概算です。"
       }
     },
     {
@@ -174,7 +175,7 @@
       "type": "childcare_fee",
       "category": "教育費補助",
       "prefecture": "神奈川県",
-      "amount": 0,
+      "amount": 180000,
       "frequency": "yearly",
       "conditions": {
         "incomeLimit": {
@@ -187,13 +188,13 @@
         }
       },
       "description": "小学校就学前のきょうだいがいる場合、第2子は保育料を軽減。川崎市の例（2024年4月から拡充）：保護者の収入や上の子の年齢、施設の制限等に関係なく全ての家庭で半額",
-      "calculationMethod": "保育料は世帯の所得によって異なるため、金額は0円として計算",
+      "calculationMethod": "月額約1.5万円（半額） × 12ヶ月 × 3年 = 54万円（平均値）",
       "metadata": {
         "sourceUrl": "https://www.city.yokohama.lg.jp/kosodate-kyoiku/hoiku-yoji/shisetsu/riyou/riyouryo/riyouryosantei/default2019031902.html",
         "sourceName": "神奈川県",
         "lastUpdated": "2025-12-06",
-        "notes": "川崎市は2024年4月から拡充",
-        "disclaimer": "保育料は世帯の所得によって異なるため、本サイトでは金額を0円としています。"
+        "notes": "川崎市は2024年4月から拡充。金額は内閣府の統計データに基づく平均値の半額",
+        "disclaimer": "保育料は世帯の所得によって異なります。この金額は統計データに基づく概算です。"
       }
     },
     {
@@ -202,7 +203,7 @@
       "type": "childcare_fee",
       "category": "教育費補助",
       "prefecture": "神奈川県",
-      "amount": 0,
+      "amount": 360000,
       "frequency": "yearly",
       "conditions": {
         "incomeLimit": {
@@ -215,13 +216,13 @@
         }
       },
       "description": "小学校就学前のきょうだいがいる場合、第3子は保育料0円。3〜5歳児クラスで第3子の場合は副食費の実費負担が免除",
-      "calculationMethod": "保育料は世帯の所得によって異なるため、金額は0円として計算",
+      "calculationMethod": "月額約3万円 × 12ヶ月 × 3年 = 108万円（平均値）",
       "metadata": {
         "sourceUrl": "https://www.city.yokohama.lg.jp/kosodate-kyoiku/hoiku-yoji/shisetsu/riyou/riyouryo/riyouryosantei/default2019031902.html",
         "sourceName": "神奈川県",
         "lastUpdated": "2025-12-06",
-        "notes": "3〜5歳児クラスで第3子の場合は副食費の実費負担が免除",
-        "disclaimer": "保育料は世帯の所得によって異なるため、本サイトでは金額を0円としています。"
+        "notes": "3〜5歳児クラスで第3子の場合は副食費の実費負担が免除。金額は内閣府の統計データに基づく平均値",
+        "disclaimer": "保育料は世帯の所得によって異なります。この金額は統計データに基づく概算です。"
       }
     },
     {

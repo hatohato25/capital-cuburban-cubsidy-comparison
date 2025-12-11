@@ -214,12 +214,24 @@ export interface PrefectureData {
 // ==========================================
 
 /**
+ * 年齢範囲の計算結果（表示用）
+ */
+export interface AgeRangeInfo {
+  fromAge: number; // 開始年齢
+  toAge: number; // 終了年齢
+  years: number; // 該当年数
+}
+
+/**
  * 適用された施策
  */
 export interface AppliedPolicy {
   policy: Subsidy | VariableAmountSubsidy;
-  calculatedAmount: number; // 計算された金額（円）
+  calculatedAmount: number; // 計算された金額（円）- 残り受給予定額
   yearsApplied: number; // 適用年数
+  ageRange?: AgeRangeInfo; // 年齢範囲情報（表示用）
+  maxAmount?: number; // 満額（0歳〜上限年齢までの総額）
+  receivedAmount?: number; // 受給済み額（0歳〜現在年齢-1歳までの累計）
 }
 
 /**
@@ -227,7 +239,8 @@ export interface AppliedPolicy {
  */
 export interface CalculationResult {
   prefecture: Prefecture;
-  totalAmount: number; // 補助金総額（円）
+  totalAmount: number; // 残り受給予定額（現在年齢から18歳まで）
+  totalMaxAmount: number; // 満額（0歳から18歳まで）
   appliedPolicies: AppliedPolicy[];
   rank: number; // 順位（1-4）
   calculatedAt: string; // 計算日時（ISO 8601形式）

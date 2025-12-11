@@ -188,7 +188,7 @@
       "type": "childcare_fee",
       "category": "教育費補助",
       "prefecture": "東京都",
-      "amount": 0,
+      "amount": 300000,
       "frequency": "yearly",
       "conditions": {
         "incomeLimit": {
@@ -201,13 +201,13 @@
         }
       },
       "description": "3〜5歳児クラスの保育料が無料（国の制度）",
-      "calculationMethod": "保育料は世帯の所得によって異なるため、金額は0円として計算",
+      "calculationMethod": "月額約2.5万円 × 12ヶ月 × 3年 = 90万円（平均値）",
       "metadata": {
         "sourceUrl": "https://www.fukushi.metro.tokyo.lg.jp/kodomo/hoiku/mushouka",
         "sourceName": "東京都福祉局",
         "lastUpdated": "2025-12-06",
-        "notes": "幼稚園については月額上限2万5,700円",
-        "disclaimer": "保育料は世帯の所得によって異なるため、本サイトでは金額を0円としています。"
+        "notes": "幼稚園については月額上限2万5,700円。金額は内閣府の統計データに基づく平均値",
+        "disclaimer": "保育料は世帯の所得によって異なります。この金額は統計データに基づく概算です。"
       }
     },
     {
@@ -216,7 +216,7 @@
       "type": "childcare_fee",
       "category": "教育費補助",
       "prefecture": "東京都",
-      "amount": 0,
+      "amount": 360000,
       "frequency": "yearly",
       "conditions": {
         "incomeLimit": {
@@ -229,13 +229,13 @@
         }
       },
       "description": "2025年9月から第1子の保育料も無償化（東京都独自施策）",
-      "calculationMethod": "保育料は世帯の所得によって異なるため、金額は0円として計算",
+      "calculationMethod": "月額約3万円 × 12ヶ月 × 3年 = 108万円（平均値）",
       "metadata": {
         "sourceUrl": "https://www.fukushi.metro.tokyo.lg.jp/kodomo/hoiku/mushouka",
         "sourceName": "東京都福祉局",
         "lastUpdated": "2025-12-06",
-        "notes": "2025年9月から実施。所得制限なし",
-        "disclaimer": "保育料は世帯の所得によって異なるため、本サイトでは金額を0円としています。"
+        "notes": "2025年9月から実施。所得制限なし。金額は内閣府の統計データに基づく平均値",
+        "disclaimer": "保育料は世帯の所得によって異なります。この金額は統計データに基づく概算です。"
       }
     },
     {

@@ -46,9 +46,12 @@ export function PrefectureResultCard({ result, rank, onDetailClick }: Prefecture
 
         {/* 補助金総額 - 巨大な数字で主役に */}
         <div className="py-6">
-          <p className="text-sm text-gray-600 mb-2 font-medium">総補助金額</p>
+          <p className="text-sm text-gray-600 mb-2 font-medium">18歳までの総補助金額</p>
           <p className={`text-5xl md:text-6xl font-bold tracking-tight font-mono ${colors.text}`}>
             {formatAmountInManYen(result.totalAmount)}
+          </p>
+          <p className="text-xs text-gray-600 mt-2">
+            ※お子様の現在年齢から18歳までに受け取れる金額です
           </p>
         </div>
 
