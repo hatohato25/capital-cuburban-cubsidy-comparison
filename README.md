@@ -4,6 +4,10 @@
 
 世帯年収とお子さんの情報を入力するだけで、各都県で受け取れる補助金の総額を自動計算し、わかりやすく比較表示します。
 
+### [DEMO](https://capital-cuburban-cubsidy-comparison.vercel.app/)
+
+<img  width="450" alt="image" src="https://github.com/user-attachments/assets/c262dfee-d003-4897-a50e-808f24b802a2" />
+
 ## 🎯 このサイトでできること
 
 - **補助金総額の比較**: 4都県の補助金総額を一目で比較
